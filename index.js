@@ -36,10 +36,8 @@ app.get("/",async(req,res)=>{
 app.post("/create",async(req,res)=>{
     
    try {
-    console.log(req.body);
-
     // Validate Aadhar number
-    const isValidAadhar = aadharValidator.isValidNumber('123456789');
+    const isValidAadhar = validator.isValidNumber(req.body.aadharNo);
     console.log(isValidAadhar);
     console.log("hi")
 
